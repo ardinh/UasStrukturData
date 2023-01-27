@@ -47,7 +47,6 @@ public class UasStrukturData {
                 stack.printStack();
                 System.out.println("=============================================================================================================================================");
                 System.out.println("\n\n");
-                next();
                 break;
             case 2:
                 Employee janeJones = new Employee("ardi", "naufan", 123);
@@ -98,7 +97,6 @@ public class UasStrukturData {
                 }
 
                 System.out.println("\n\n");
-                next();
                 break;
             default:
                 firstTask();
@@ -158,7 +156,6 @@ public class UasStrukturData {
                             + result + "(atau Pada Urutan ke " + (result + 1) + ")");
                 }
                 System.out.println("\n\n");
-                next();
                 break;
             case 2:
                 System.out.println(Arrays.toString(arr));
@@ -177,7 +174,6 @@ public class UasStrukturData {
                             + bresult + "(atau Pada Urutan ke " + (bresult + 1) + ")");
                 }
                 System.out.println("\n\n");
-                next();
                 break;
             default:
                 secondTask();
@@ -208,6 +204,7 @@ public class UasStrukturData {
 
         System.out.println("Max Data Of Binary Tree => " + intTree.max());
         System.out.println("Min Data Of Binary Tree => " + intTree.min());
+        System.out.println("\n\n");
     }
 
     public static void soal() {

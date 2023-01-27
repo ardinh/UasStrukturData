@@ -11,7 +11,7 @@ package uasstrukturdata;
  */
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee>  {
     private String firstName;
     private String lastName;
     private int id;
@@ -82,5 +82,16 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", id=" + id +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Employee t) {
+        if (id > t.id) {
+            return 1;
+        } else if (id < t.id) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }

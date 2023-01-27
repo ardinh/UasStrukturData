@@ -19,7 +19,7 @@ public class UasStrukturData {
     public static void firstTask() {
         int noSoal = 0;
         Scanner masukanSoal = new Scanner(System.in);
-        String soal = "1. Stack\n" + "2.Queue\n";
+        String soal = "1. Stack\n" + "2. Queue\n";
         System.out.println(soal);
         System.out.print("Masukan Pilihan : ");
         noSoal = masukanSoal.nextInt();
@@ -120,11 +120,14 @@ public class UasStrukturData {
         int l = 0, r = arr.length - 1;
         while (l <= r) {
             int m = l + (r - l) / 2;
-            if (arr[m].equalsIgnoreCase(x)) {
+ 
+            int res = x.compareTo(arr[m]);
+            if (res == 0)
                 return m;
-            } else {
+            if (res > 0)
+                l = m + 1;
+            else
                 r = m - 1;
-            }
         }
         return -1;
     }
@@ -133,7 +136,7 @@ public class UasStrukturData {
         int noSoal = 0;
         String arr[] = {"ardi", "naufan", "hadian", "lidia", "gunawan"};
         Scanner masukanSoal = new Scanner(System.in);
-        String soal = "1. Linear Search\n" + "2.Binary Search\n";
+        String soal = "1. Linear Search\n" + "2. Binary Search\n";
         System.out.println(soal);
         System.out.print("Masukan Pilihan : ");
         noSoal = masukanSoal.nextInt();
@@ -164,6 +167,7 @@ public class UasStrukturData {
                 String bx = bs.nextLine();
 
                 // Function call
+                Arrays.sort(arr);
                 int bresult = binarySearch(arr, bx);
                 if (bresult == -1) {
                     System.out.print(
